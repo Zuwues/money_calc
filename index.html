@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="block_content">
+    <div class="block">
+        <h1>Зарплата</h1>
+        <label for="vol">Основная ЗП</label><input type="text" name="adress" id="vol" class="form-control" placeholder="0" required=""/>
+        <p>Доп заработок</p>
+        <input type="text" name="adress" id="vol1" class="form-control" placeholder="0" required=""/>
+        <p>Другое</p>
+        <input type="text" name="adress" id="vol2" class="form-control" placeholder="0" required=""/>
+
+    </div>
+    <div class="blockk">
+        <h1>Траты</h1>
+        <p>Квартира/ком.платежи</p>
+        <input type="text" name="adress" id="vol3" class="form-control" placeholder="0" required=""/>
+        <p>Еда</p>
+        <input type="text" name="adress" id="vol4" class="form-control" placeholder="0" required=""/>
+        <p>Остальное</p>
+        <input type="text" name="adress" id="vol5" class="form-control" placeholder="0" required=""/>
+    </div>
+    <div class="blog">
+        <h1>Свободные средства</h1>
+        <div class="row col-12 mb-3"><input readonly type="number" id="out1" value="0"> <span class="rub">₽</span></div>
+        <h1>Итого траты</h1>
+        <div class="row col-12 mb-3"><input readonly type="number" id="out2" value="0">  <span class="rub">₽</span></div>
+        <h1>Итого ЗП</h1>
+        <div class="row col-12 mb-3"><input readonly type="number" id="out3" value="0">  <span class="rub">₽</span></div>
+
+        <br>
+
+
+
+    </div>
+</div>
+<div class="block2">
+    <div class="polz">
+        <style>
+            .slidecontainer {
+                width: 100%;
+            }
+            /*fdsfds*/
+            .slider {
+                -webkit-appearance: none;
+                width: 691px;
+                height: 15px;
+                border-radius: 5px;
+                background: #d3d3d3;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+            }
+
+            .slider:hover {
+                opacity: 1;
+            }
+
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background: #000000;
+                cursor: pointer;
+            }
+
+            .slider::-moz-range-thumb {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background: #000000;
+                cursor: pointer;
+            }
+        </style>
+        </head>
+        <body>
+
+        <h1>Сколько откладывать будем?</h1>
+
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="polz">
+            <p style="font-weight: bold; font-size: 25px;   position: absolute;
+
+  left: 485px;"> <span id="demo" style="font-weight: bold; font-size: 25px; text-align: center"></span>%</p>
+        </div>
+        <div class="v">
+            <h1>В копилку идет в этом месяце - <span class="result">0</span> рублей  </h1>
+        </div>
+    </div>
+    <script>
+        var slider = document.getElementById("polz");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+    </script></div>
+
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
